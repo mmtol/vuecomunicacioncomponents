@@ -2,21 +2,24 @@
   <div>
     <!-- <PadreDeportes/>
     <PadreNumeros/> -->
-    <ComicsComponent/>
+    <!-- <ComicsComponent/> -->
+     <SeleccionMultiple/>
   </div>
 </template>
 
 <script>
 // import PadreDeportes from './components/PadreDeportes.vue';
 // import PadreNumeros from './components/PadreNumeros.vue';
-import ComicsComponent from './components/ComicsComponent.vue';
+// import ComicsComponent from './components/ComicsComponent.vue';
+import SeleccionMultiple from './components/SeleccionMultiple.vue';
 
 export default {
   name: 'App',
   components: {
     // PadreDeportes,
     // PadreNumeros,
-    ComicsComponent
+    //ComicsComponent
+    SeleccionMultiple
   }
 }
 </script>
