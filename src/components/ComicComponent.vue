@@ -11,6 +11,7 @@
             {{ comic.year }}
         </h4>
         <button @click="seleccionarFav">Elegir como fav</button>
+        <button @click="deleteComic">Delete</button>
     </div>
 </template>
 
@@ -18,12 +19,16 @@
     export default 
     {
         name:"ComicComponent",
-        props:["comic"],
+        props:["comic", "index"],
         methods:
         {
             seleccionarFav()
             {
                 this.$emit("seleccionarFav", this.comic);
+            },
+            deleteComic()
+            {
+                this.$emit("deleteComic", this.index);
             }
         }
     }

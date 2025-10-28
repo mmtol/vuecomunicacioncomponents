@@ -1,9 +1,33 @@
 <template>
     <div>
         <h1>Comics</h1>
+        <div>
+            <form v-on:submit.prevent="crearComic()">
+                <hr/>
+                <label>Título</label>
+                <br/>
+                <input type="text" v-model="form.titulo"/>
+                <br/>
+                <label>Imagen</label>
+                <br/>
+                <input type="text" v-model="form.imagen"/>
+                <br/>
+                <label>Descripción</label>
+                <br/>
+                <input type="text" v-model="form.descripcion"/>
+                <br/>
+                <label>Año</label>
+                <br/>
+                <input type="text" v-model="form.year"/>
+                <br/>
+                <br/>
+                <button>Crear comic</button>
+                <hr/>
+            </form>
+        </div>
         <h3 v-if="fav">Fav: {{ fav }}</h3>
-        <div id="comics" v-for="comic in comics" :key="comic">
-            <ComicComponent :comic="comic" v-on:seleccionarFav="seleccionarFav"/>
+        <div id="comics" v-for="(comic,index) in comics" :key="comic">
+            <ComicComponent :comic="comic" :index="index" v-on:seleccionarFav="seleccionarFav" v-on:deleteComic="deleteComic"/>
         </div>
     </div>
 </template>
@@ -21,6 +45,14 @@ export default {
         seleccionarFav(comic)
         {
             this.fav = comic.titulo;
+        },
+        crearComic()
+        {
+            this.comics.push(this.form);
+        },
+        deleteComic(index)
+        {
+            this.comics.splice(index, 1);
         }
     },
     data() {
@@ -69,7 +101,14 @@ export default {
                     year: 2001,
                 },
             ],
-            fav:null
+            fav:null,
+            form:
+            {
+                titulo:"",
+                imagen:"",
+                descripcion:"",
+                year:0
+            }
         };
     },
 };
