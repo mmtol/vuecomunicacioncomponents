@@ -36,3 +36,7 @@
         }
     }
 </script>
+
+<style>
+     @import './../assets/css/estilos.css';
+</style>
