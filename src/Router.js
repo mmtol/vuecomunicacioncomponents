@@ -1,12 +1,17 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import SumaCheckbox from './components/SumaCheckbox.vue';
+import PadreDeportes from './components/PadreDeportes.vue';
+import PadreNumeros from './components/PadreNumeros.vue';
 
 //array con las rutas
 const rutas=
 [
     {
-        path:"/sumacheckbox",
-        component:SumaCheckbox
+        path:"/padredeportes",
+        component:PadreDeportes
+    },
+    {
+        path:"/padrenumeros",
+        component:PadreNumeros
     }
 ]
 
