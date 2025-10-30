@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import PadreDeportes from './components/PadreDeportes.vue';
 import PadreNumeros from './components/PadreNumeros.vue';
+import ComicsComponent from './components/ComicsComponent.vue';
+import SeleccionMultiple from './components/SeleccionMultiple.vue';
 
 //array con las rutas
 const rutas=
@@ -12,6 +14,14 @@ const rutas=
     {
         path:"/padrenumeros",
         component:PadreNumeros
+    },
+    {
+        path:"/comicscomponent",
+        component:ComicsComponent
+    },
+    {
+        path:"/seleccionmultiple",
+        component:SeleccionMultiple
     }
 ]
 
