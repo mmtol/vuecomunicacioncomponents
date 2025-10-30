@@ -13,6 +13,12 @@
             <li>
                 <router-link to="/seleccionmultiple">Selección múltiple</router-link>
             </li>
+            <li>
+                <router-link to="/numerodoble">Numero doble sin parametro</router-link>
+            </li>
+            <li>
+                <router-link to="/numerodoble/777">Numero doble con parametro</router-link>
+            </li>
         </ul>
     </div>
 </template>

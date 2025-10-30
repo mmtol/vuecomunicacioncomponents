@@ -3,6 +3,7 @@ import PadreDeportes from './components/PadreDeportes.vue';
 import PadreNumeros from './components/PadreNumeros.vue';
 import ComicsComponent from './components/ComicsComponent.vue';
 import SeleccionMultiple from './components/SeleccionMultiple.vue';
+import NumeroDoble from './components/NumeroDoble.vue';
 
 //array con las rutas
 const rutas=
@@ -22,6 +23,10 @@ const rutas=
     {
         path:"/seleccionmultiple",
         component:SeleccionMultiple
+    },
+    {
+        path:"/numerodoble/:numero?",
+        component:NumeroDoble
     }
 ]
 
