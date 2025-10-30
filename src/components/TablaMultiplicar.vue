@@ -10,11 +10,11 @@
             </thead>
             <tbody>
                 <tr v-for="contador in 10" :key="contador">
-                        <td>
-                            {{num}} * {{ contador }} = 
-                        </td>
-                        <td>{{ num * contador }}</td>
-                    </tr>
+                    <td>
+                        {{num}} * {{ contador }} = 
+                    </td>
+                    <td>{{ num * contador }}</td>
+                </tr>
             </tbody>
         </table>
     </div>
