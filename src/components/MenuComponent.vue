@@ -1,7 +1,7 @@
 <template>
     <div>
         <ul id="menu">
-            <li>
+            <!-- <li>
                 <router-link to="/padredeportes">Padre deportes</router-link>
             </li>
             <li>
@@ -18,7 +18,7 @@
             </li>
             <li v-for="num in nums" :key="num">
                 <router-link :to="'/numerodoble/'+num">Numero doble de {{ num }}</router-link>
-            </li>
+            </li> -->
              <li v-for="num in mult" :key="num">
                 <router-link :to="'/tablamultiplicar/'+num">Tabla del {{ num }}</router-link>
             </li>
