@@ -3,6 +3,7 @@
         <h1>Número doble</h1>
         <h2>{{ mensaje }}</h2>
         <h3>{{ doble }}</h3>
+        <button @click="volveraDeportes()">Volver a deportes</button>
     </div>
 </template>
 
@@ -43,6 +44,13 @@
                     console.log("ahora "+nextVal);
                     console.log("luego "+oldVal);
                 }
+            }
+        },
+        methods:
+        {
+            volveraDeportes()
+            {
+                this.$router.push("/padredeportes");
             }
         }
     }
