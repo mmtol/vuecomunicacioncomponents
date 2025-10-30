@@ -19,6 +19,9 @@
             <li v-for="num in nums" :key="num">
                 <router-link :to="'/numerodoble/'+num">Numero doble de {{ num }}</router-link>
             </li>
+             <li v-for="num in mult" :key="num">
+                <router-link :to="'/tablamultiplicar/'+num">Tabla del {{ num }}</router-link>
+            </li>
         </ul>
     </div>
 </template>
@@ -30,8 +33,24 @@ export default
     data()
     {
         return{
-            nums:[99,405]
+            nums:[99,405],
+            mult:[]
         }
+    },
+    methods:
+    {
+        rellenarAleatorios()
+        {
+            for (var i = 0; i < 5; ++i)
+            {
+                var random = parseInt(Math.random()*100)+1;
+                this.mult[i] = random;
+            }
+        }
+    },
+    mounted()
+    {
+        this.rellenarAleatorios();
     }
 }
 </script>

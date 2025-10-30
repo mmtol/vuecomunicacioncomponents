@@ -4,6 +4,7 @@ import PadreNumeros from './components/PadreNumeros.vue';
 import ComicsComponent from './components/ComicsComponent.vue';
 import SeleccionMultiple from './components/SeleccionMultiple.vue';
 import NumeroDoble from './components/NumeroDoble.vue';
+import TablaMultiplicar from './components/TablaMultiplicar.vue';
 
 //array con las rutas
 const rutas=
@@ -27,6 +28,10 @@ const rutas=
     {
         path:"/numerodoble/:numero?",
         component:NumeroDoble
+    },
+    {
+        path:"/tablamultiplicar/:numero?",
+        component:TablaMultiplicar
     }
 ]
 
